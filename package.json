@@ -1,0 +1,40 @@
+{
+  "name": "giftin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/app.js",
+  "scripts": {
+    "mkdir": "mkdir -p build",
+    "build": "npm run clean && npm run mkdir && npm run build:html  && npm run build:css  && npm run build:js && npm run build:images ",
+    "watch": "npm run watch:html & npm run watch:js & npm run watch:css & npm run watch:images",
+    "clean": "rm -rf build",
+
+    "build:images": "npm run clean:images && cp images/happygift.jpg build/",
+    "clean:images": "rm -f build/happygift.jpg",
+      "watch:images": "npm run build:images && chokidar happygift.jpg -c 'npm run build:images'",
+
+    "build:html": "npm run clean:html && cp index.html build/",
+    "watch:html": "npm run build:html && chokidar index.html -c 'npm run build:html'",
+    "clean:html": "rm -f build/index.html",
+
+    "build:js": "npm run clean:js && webpack",
+      "watch:js": "npm run build:js && webpack --watch",
+      "clean:js": "rm -f build/$npm_package_name.$npm_package_version.js build/$npm_package_name.$npm_package_version.js.map",
+      "build:css": "npm run clean:css && lessc --source-map css/index.less build/$npm_package_name.$npm_package_version.css",
+   "watch:css": "npm run build:css && chokidar 'css/**/*.less' -c 'npm run build:css'",
+   "clean:css": "rm -f build/$npm_package_name.$npm_package_version.css build/$npm_package_name.$npm_package_version.css.map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "chokidar-cli": "^1.2.0",
+    "less": "^2.7.1",
+    "webpack": "^1.13.2"
+  }
+}
