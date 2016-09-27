@@ -3,6 +3,8 @@
 @yellow:#ffff99;
 @green:#4CAF50;
 @blue: #538cc6;
+@white:#f2f2f2;
+
 
 
 body {
@@ -10,13 +12,57 @@ body {
   margin:0;
   font-family: 'Nunito', sans-serif;
 
+}
 
+.backdrop{
+  background-image: url("happygift.jpg");
+  width: 100%;
+   background-repeat: no-repeat;
+    // background-size: contain;
 }
 
 .main {
 
 padding-top:60px;
+background-color: rgba(0,0,0,0.7);
+height: 800px;
 
+}
+
+.welcomer{
+
+  width:800px;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  h1{
+    font-size: 40px;
+    color:@white;
+    text-align: center;
+  }
+
+  p{
+    color:@white;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  h2{
+    color:#bfbfbf;
+    font-size: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left:10px;
+    border: 2px solid white;
+    border-radius: 3px;
+    width:100px;
+
+    &:hover{
+      color:@black;
+    }
+  }
 
 }
 
@@ -72,7 +118,7 @@ a {
   display: block;
 text-align:center;
 text-decoration: none;
-color:@black;
+color:#cccccc;
 font-size: 20px;
 
 
@@ -85,11 +131,15 @@ color:white;
 
 .sign-in {
 
+  display: none;
   padding-top: 30px;
+  background-color: rgba(0,0,0,0.6);
 
 h4{
   text-align: center;
   font-size: 18px;
+  color:white;
+  font-size: 20px;
 
 }
   input
