@@ -1,195 +1,261 @@
 @black: #262626;
 @lightpink: #ffe6e6;
-@yellow:#ffff99;
-@green:#4CAF50;
+@yellow: #ffff99;
+@green: #4CAF50;
 @blue: #538cc6;
-@white:#f2f2f2;
+@white: #f2f2f2;
+@faded-black: rgba(0,0,0,0.7);
 
 
+.centralize {
+    margin-left: auto;
+    margin-right: auto;
+}
 
-body {
-  background-color:black;
-  margin:0;
-  font-family: 'Nunito', sans-serif;
+.birthday-person {
+  float: left;
+  width:33.3%;
+  display:inline-block;
+
+  img{
+    display: block;
+    .centralize;
+  }
+
 
 }
 
-.backdrop{
-  background-image: url("happygift.jpg");
-  width: 100%;
-   background-repeat: no-repeat;
+.birthdays{
+
+  li{
+    list-style: none;
+
+  }
+
+  img
+  {
+    width: 100px;
+    border-radius: 50%;
+  }
+
+}
+
+.profile-picture {
+
+    img {
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    display: block;
+    .centralize;
+}
+
+.show-user {
+    font-size: 10px;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    height: 800px;
+}
+
+.hidden {
+    display: none;
+}
+
+.backdrop {
+    background-image: url("happygift.jpg");
+    width: 100%;
+    background-repeat: no-repeat;
     // background-size: contain;
 }
 
-.main {
+.side-bar {
+    background-color: @faded-black;
+    height: 900px;
+    width: 300px;
+    position: absolute;
 
-padding-top:60px;
-background-color: rgba(0,0,0,0.7);
-height: 800px;
+    li {
+        color: @white;
+        font-size: 25px;
+        list-style: none;
+        padding-bottom: 15px;
 
-}
-
-.welcomer{
-
-  width:800px;
-  margin-left: auto;
-  margin-right: auto;
-
-
-  h1{
-    font-size: 40px;
-    color:@white;
-    text-align: center;
-  }
-
-  p{
-    color:@white;
-    text-align: center;
-    font-size: 30px;
-  }
-
-  h2{
-    color:#bfbfbf;
-    font-size: 30px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left:10px;
-    border: 2px solid white;
-    border-radius: 3px;
-    width:100px;
-
-    &:hover{
-      color:@black;
+        &:hover {
+            color: @black;
+        }
     }
-  }
-
 }
 
-img{
- opacity: 0.1;
- width:100%;
-
+.logged-main {
+    margin-left: 300px;
 }
 
-#giftinlogo{
-  color:@black;
-  width:500px;
-  height: 100px;
- margin-left: auto;
- margin-right: auto;
+.birthdays {
+    .centralize;
+    border-radius: 5px;
+    background-color: @faded-black;
+    padding: 20px;
+    width: 900px;
+    height: 700px;
+    .hidden;
+    color: @white;
 
-
+    h2 {
+        text-align: center;
+    }
 }
 
-#giftinlogo h1{
-  font-family: 'Fredoka One', cursive;
-  font-size:70px;
-text-align: center;
+.main {
+    padding-top: 60px;
+    background-color: rgba(0,0,0,0.7);
+    height: 800px;
 }
 
- .fa.fa-gift {
-display: inline-block;
-font-size:90px;
-color:@lightpink
+.welcomer {
+    width: 800px;
+    .centralize;
+    // margin-left: auto;
+    // margin-right: auto;
+    h1 {
+        font-size: 40px;
+        color: @white;
+        text-align: center;
+    }
+
+    p {
+        color: @white;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    h2 {
+        .centralize;
+        color: #bfbfbf;
+        font-size: 30px;
+        display: block;
+        // margin-left: auto;
+        // margin-right: auto;
+        padding-left: 10px;
+        border: 2px solid white;
+        border-radius: 3px;
+        width: 100px;
+
+        &:hover {
+            color: @black;
+        }
+    }
+}
+// img {
+//     opacity: 0.1;
+//     width: 100%;
+// }
+
+#giftinlogo {
+    color: @black;
+    width: 500px;
+    height: 100px;
+    .centralize;
 }
 
+#giftinlogo h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 70px;
+    text-align: center;
+}
+
+.fa.fa-gift {
+    display: inline-block;
+    font-size: 90px;
+    color: @lightpink
+}
 
 .head {
-  font-family: 'Montserrat', sans-serif;
-  padding-top: 1px;
-  max-width: 100%;
-  height: 160px;
-  box-sizing: border-box;
-  background-color:@green;
-
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 1px;
+    max-width: 100%;
+    height: 160px;
+    box-sizing: border-box;
+    background-color: @green;
 }
 
 .sign-in {
-  height: 600px;
-  width: 600px;
-  background-color:@yellow;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 6px;
+    height: 600px;
+    width: 600px;
+    background-color: @yellow;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
 }
 
 a {
-  display: block;
-text-align:center;
-text-decoration: none;
-color:#cccccc;
-font-size: 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 20px;
 
-
-&:hover{
-color:white;
+    &:hover {
+        color: white;
+    }
 }
-
-}
-
 
 .sign-in {
+    // display: none;
+    padding-top: 30px;
+    background-color: rgba(0,0,0,0.6);
 
-  display: none;
-  padding-top: 30px;
-  background-color: rgba(0,0,0,0.6);
+    h4 {
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        font-size: 20px;
+    }
 
-h4{
-  text-align: center;
-  font-size: 18px;
-  color:white;
-  font-size: 20px;
+    input {
+        width: 400px;
+        height: 45px;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        font-size: 30px;
+    }
 
-}
-  input
-  {
-    width:400px;
-    height: 45px;
-    border-radius:5px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    font-size: 30px;
+    button {
+        background-color: #ff9999;
+        border-radius: 0 solid 5px;
+        width: 400px;
+        height: 70px;
+    }
 
-  }
+    #login-button {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 30px;
+        font-family: 'Nunito', sans-serif;
+        display: block;
+        margin-top: 40px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
 
-  button {
+    #facebook-login-button {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25px;
+        font-family: 'Nunito', sans-serif;
+        display: block;
+        margin-top: 10px;
+        border-radius: 5px;
+        background-color: @blue;
 
-    background-color: #ff9999;
-    border-radius: 0px solid 5px;
-    width: 400px;
-    height: 70px;
-
-  }
-
-  #login-button {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 30px;
-    font-family: 'Nunito', sans-serif;
-    display: block;
-    margin-top: 40px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-
-  #facebook-login-button {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 25px;
-    font-family: 'Nunito', sans-serif;
-    display: block;
-    margin-top: 10px;
-    border-radius: 5px;
- background-color: @blue;
-
- #whiteit {
-   color:white;
- }
-
-  }
-
-
-
+        #whiteit {
+            color: white;
+        }
+    }
 }

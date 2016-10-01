@@ -1,12 +1,81 @@
+.centralize {
+  margin-left: auto;
+  margin-right: auto;
+}
+.birthday-person {
+  float: left;
+  width: 33.3%;
+  display: inline-block;
+}
+.birthday-person img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.birthdays li {
+  list-style: none;
+}
+.birthdays img {
+  width: 100px;
+  border-radius: 50%;
+}
+.profile-picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile-picture img {
+  width: 200px;
+  border-radius: 50%;
+}
+.show-user {
+  font-size: 10px;
+}
 body {
   background-color: black;
   margin: 0;
   font-family: 'Nunito', sans-serif;
+  height: 800px;
+}
+.hidden {
+  display: none;
 }
 .backdrop {
   background-image: url("happygift.jpg");
   width: 100%;
   background-repeat: no-repeat;
+}
+.side-bar {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 900px;
+  width: 300px;
+  position: absolute;
+}
+.side-bar li {
+  color: #f2f2f2;
+  font-size: 25px;
+  list-style: none;
+  padding-bottom: 15px;
+}
+.side-bar li:hover {
+  color: #262626;
+}
+.logged-main {
+  margin-left: 300px;
+}
+.birthdays {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  width: 900px;
+  height: 700px;
+  display: none;
+  color: #f2f2f2;
+}
+.birthdays h2 {
+  text-align: center;
 }
 .main {
   padding-top: 60px;
@@ -29,11 +98,11 @@ body {
   font-size: 30px;
 }
 .welcomer h2 {
+  margin-left: auto;
+  margin-right: auto;
   color: #bfbfbf;
   font-size: 30px;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 10px;
   border: 2px solid white;
   border-radius: 3px;
@@ -41,10 +110,6 @@ body {
 }
 .welcomer h2:hover {
   color: #262626;
-}
-img {
-  opacity: 0.1;
-  width: 100%;
 }
 #giftinlogo {
   color: #262626;
@@ -90,7 +155,6 @@ a:hover {
   color: white;
 }
 .sign-in {
-  display: none;
   padding-top: 30px;
   background-color: rgba(0, 0, 0, 0.6);
 }
@@ -111,7 +175,7 @@ a:hover {
 }
 .sign-in button {
   background-color: #ff9999;
-  border-radius: 0px solid 5px;
+  border-radius: 0 solid 5px;
   width: 400px;
   height: 70px;
 }
